@@ -15,21 +15,17 @@ CREATE TABLE `users` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `users`
---
 -- NOTE: The passwords are encrypted using BCrypt
 --
--- A generation tool is avail at: http://www.luv2code.com/generate-bcrypt-password
 --
--- Default passwords here are: fun123
+-- Default passwords here are: 1234
 --
 
 INSERT INTO `users` 
 VALUES 
-('john','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
-('mary','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
-('susan','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1);
+('rohit','{bcrypt}$2a$10$AOHCiRQQ03yh1KNPrnwLz.55cFTAanFcfEuv9B4F5YeHSBc4yvpsK',1),
+('tony','{bcrypt}$2a$10$JQM8Dc7Mm3xmRTDJp6E3KuhLT1puDj..ajlg3Tsiv.ODYithZ1owe',1),
+('bruce','{bcrypt}$2a$10$PaljehhVfbhUERxkbBJovucoaC4Mar9TlFryTwmTJcX1HpkwjWZnW',1);
 
 
 --
@@ -44,9 +40,6 @@ CREATE TABLE `authorities` (
   CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `authorities`
---
 
 INSERT INTO `authorities` 
 VALUES 
@@ -55,5 +48,4 @@ VALUES
 ('tony','ROLE_MANAGER'),
 ('bruce','ROLE_EMPLOYEE'),
 ('bruce','ROLE_ADMIN');
-
 

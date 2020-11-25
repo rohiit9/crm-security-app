@@ -1,3 +1,3 @@
 # crm-security-app
-Spring based CRM application 
-Using Spring MVC, Hibernate, Spring security and JDBC developed a CRM application in Java. 
+Spring based CRM application.
+This application has been developed using Spring MVC, Hibernate, Spring security and JDBC. 

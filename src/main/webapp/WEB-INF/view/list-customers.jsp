@@ -33,7 +33,13 @@
 				User: <security:authentication property="principal.username" />, Role(s): <security:authentication property="principal.authorities" />
 			</p>
 		
-
+			<!--  add a search box -->
+			<form:form action="search" method="GET">
+				Search customer: <input type="text" name="theSearchName" />
+				
+				<input type="submit" value="Search" class="add-button" />
+			</form:form>
+			
 			<security:authorize access="hasAnyRole('MANAGER', 'ADMIN')">
 			
 				<!-- put new button: Add Customer -->
